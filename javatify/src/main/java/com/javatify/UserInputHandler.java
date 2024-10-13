@@ -9,6 +9,7 @@ class UserInputHandler {
                 break;
             case "s":
                 System.out.println("-->Search by title<--");
+                Search.searchByTitle(userInput, library);
                 break;
             case "l":
                 System.out.println("-->Library<--");

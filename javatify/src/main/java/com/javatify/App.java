@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public final class App {
 
-    private static String directoryPath = "C:\\Users\\miles\\Computer-Science\\Java-Fall-24\\Projects\\Javatify\\javatify\\src\\main\\java\\com\\javatify\\example";
+    ;
 
     public static void main(String[] args) {
         Song[] library = LibraryManager.readAudioLibrary();

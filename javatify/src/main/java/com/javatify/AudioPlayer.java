@@ -17,7 +17,15 @@ class AudioPlayer {
         }
 
         try {
-            File file = new File(Config.getDirectoryPath() + "/audio/" + song.fileName());
+            String filePath = Config.getDirectoryPath() + "/audio/" + song.fileName();
+            File file = new File(filePath);
+            System.out.println("Attempting to play file: " + filePath);
+
+            if (!file.exists()) {
+                System.out.println("File does not exist: " + filePath);
+                return;
+            }
+
             if (file.getName().endsWith(".mp3")) {
                 FileInputStream fis = new FileInputStream(file);
                 mp3Player = new Player(fis);
@@ -29,7 +37,7 @@ class AudioPlayer {
                     }
                 }).start();
             } else {
-                System.out.println("Unsupported file format");
+                System.out.println("Unsupported file format: " + file.getName());
             }
         } catch (IOException | JavaLayerException e) {
             System.out.println("Error: " + e.getMessage());

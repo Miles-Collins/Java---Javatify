@@ -22,6 +22,10 @@ public class Song {
         return s;
     }
 
+    public Song(String fileName) {
+        this.fileName = fileName;
+    }
+
     // getters
     public String name() {
         return this.name;
