@@ -1,31 +1,37 @@
 package com.javatify;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 class AudioPlayer {
 
-    private static Clip audioClip;
+    private static Player mp3Player;
 
     public static void play(Song song) {
-        if (audioClip != null) {
-            audioClip.close();
+        if (mp3Player != null) {
+            mp3Player.close();
         }
 
         try {
-            audioClip = AudioSystem.getClip();
-            File file = new File(Config.getDirectoryPath() + "/wav/" + song.fileName());
-            AudioInputStream in = AudioSystem.getAudioInputStream(file);
-            audioClip.open(in);
-            audioClip.setMicrosecondPosition(0);
-            audioClip.loop(Clip.LOOP_CONTINUOUSLY);
-        } catch (IOException | LineUnavailableException | UnsupportedAudioFileException e) {
+            File file = new File(Config.getDirectoryPath() + "/audio/" + song.fileName());
+            if (file.getName().endsWith(".mp3")) {
+                FileInputStream fis = new FileInputStream(file);
+                mp3Player = new Player(fis);
+                new Thread(() -> {
+                    try {
+                        mp3Player.play();
+                    } catch (JavaLayerException e) {
+                        System.out.println("Error playing MP3: " + e.getMessage());
+                    }
+                }).start();
+            } else {
+                System.out.println("Unsupported file format");
+            }
+        } catch (IOException | JavaLayerException e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
