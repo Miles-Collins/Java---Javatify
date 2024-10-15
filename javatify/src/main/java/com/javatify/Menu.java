@@ -14,6 +14,19 @@ public class Menu {
         System.out.print("Enter corresponding letter: ");
     }
 
+    public static void displayPlaybackMenu() {
+        System.out.println("");
+        System.out.println("---- Now Playing ----");
+        System.out.println("[Next] song");
+        System.out.println("[Prev]ious song");
+        System.out.println("[Pause] playback");
+        System.out.println("[Resume] playback");
+        System.out.println("[Stop] playback");
+        System.out.println("[M]ain menu");
+        System.out.println("");
+        System.out.print("Enter corresponding letter: ");
+    }
+
     public static void nowPlaying(Song song) {
         System.out.println("Now playing: " + song.name() + " by " + song.artist());
     }

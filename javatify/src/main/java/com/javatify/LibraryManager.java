@@ -10,9 +10,10 @@ import com.google.gson.stream.JsonReader;
 
 class LibraryManager {
 
+    static Song[] library = null;
+
     public static Song[] readAudioLibrary() {
         String filePath = Config.getDirectoryPath() + "/audio-library.json";
-        Song[] library = null;
 
         try {
             JsonReader reader = new JsonReader(new FileReader(filePath));
@@ -22,5 +23,14 @@ class LibraryManager {
         }
 
         return library;
+    }
+
+    public static int returnIndex(Song song) {
+        for (int i = 0; i < library.length; i++) {
+            if (library[i].name().equals(song.name()) && library[i].artist().equals(song.artist())) {
+                return i;
+            }
+        }
+        return -1;
     }
 }

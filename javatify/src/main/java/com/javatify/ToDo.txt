@@ -1,0 +1,39 @@
+1. Add Song to Library
+   - Implement functionality to add new songs to the audio library.
+   - Ensure the new songs are saved to the audio-library.json file.
+
+2. Play Random Song
+   - Implement functionality to play a random song from the library.
+   - Ensure the app can play another random song after the current one ends.
+
+3. Stop Song
+   - Implement functionality to stop the currently playing song.
+   - Ensure the app can handle stopping and starting songs correctly.
+
+4. User Input Handling
+   - Update UserInputHandler to handle new commands such as "stop" and "play random".
+   - Ensure the app responds correctly to user inputs.
+
+5. Library Management
+   - Implement functionality to read and write the audio library from/to the audio-library.json file.
+   - Ensure the library is loaded correctly at the start of the app.
+
+6. Error Handling
+   - Add error handling for file operations (e.g., reading/writing JSON files).
+   - Ensure the app handles missing or corrupted files gracefully.
+
+7. Menu Display
+   - Update the menu to display new options such as "Stop" and "Play Random".
+   - Ensure the menu is user-friendly and easy to navigate.
+
+8. Testing
+   - Write unit tests for the new functionalities.
+   - Ensure the app is thoroughly tested and free of bugs.
+
+9. Documentation
+   - Update the documentation to reflect the new functionalities.
+   - Ensure the code is well-documented and easy to understand.
+
+10. Code Cleanup
+    - Refactor the code to improve readability and maintainability.
+    - Remove any unused or redundant code.

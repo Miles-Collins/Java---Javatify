@@ -12,9 +12,15 @@ public final class App {
         String userInput = "";
 
         while (!userInput.equals("q")) {
-            Menu.displayMenu();
-            userInput = input.nextLine().toLowerCase();
-            UserInputHandler.handleUserInput(userInput, library);
+            if (UserInputHandler.isPlaying()) {
+                Menu.displayPlaybackMenu();
+                userInput = input.nextLine().toLowerCase();
+                UserInputHandler.handlePlaybackInput(userInput, library);
+            } else {
+                Menu.displayMenu();
+                userInput = input.nextLine().toLowerCase();
+                UserInputHandler.handleUserInput(userInput, library);
+            }
         }
 
         input.close();
