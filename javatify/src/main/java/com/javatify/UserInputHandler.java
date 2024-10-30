@@ -21,8 +21,15 @@ class UserInputHandler {
             case "s":
                 System.out.println("");
                 System.out.println("-->Search by title<--");
-                System.out.print("Enter title: ");
+                System.out.println("Enter song title to search for a song");
+                System.out.println("or");
+                System.out.println("Press [H]ome to return to main menu");
+                System.out.print("Enter song title: ");
                 userInput = System.console().readLine();
+                if (userInput.toLowerCase().equals("h")) {
+                    Menu.displayMenu();
+                    break;
+                }
                 Search.searchByTitle(userInput, library);
                 isPlaying = true;
                 break;
@@ -39,6 +46,7 @@ class UserInputHandler {
                 break;
             case "q":
                 System.out.println("-->Quit<--");
+                AudioPlayer.stop();
                 break;
             case "stop":
                 AudioPlayer.stop();
