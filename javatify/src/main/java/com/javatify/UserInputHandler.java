@@ -1,5 +1,7 @@
 package com.javatify;
 
+import java.util.Scanner;
+
 class UserInputHandler {
 
     private static boolean isPlaying = false;
@@ -19,15 +21,10 @@ class UserInputHandler {
                 System.out.println("-->Home<--");
                 break;
             case "s":
-                System.out.println("");
-                System.out.println("-->Search by title<--");
-                System.out.println("Enter song title to search for a song");
-                System.out.println("or");
-                System.out.println("Press [H]ome to return to main menu");
-                System.out.print("Enter song title: ");
-                userInput = System.console().readLine();
+                Menu.displaySearchMenu();
+                Scanner input = new Scanner(System.in);
+                userInput = input.nextLine();
                 if (userInput.toLowerCase().equals("h")) {
-                    Menu.displayMenu();
                     break;
                 }
                 Search.searchByTitle(userInput, library);
@@ -84,13 +81,10 @@ class UserInputHandler {
 
     public static void skipSong() {
         Menu.skipSong();
-        // Scanner input = new Scanner(System.in);
-
         AudioPlayer.playRandomSong(AudioPlayer.library);
     }
 
     public static boolean isPlaying() {
         return isPlaying;
     }
-
 }

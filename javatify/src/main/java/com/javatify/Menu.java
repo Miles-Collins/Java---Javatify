@@ -28,6 +28,7 @@ public class Menu {
     }
 
     public static void nowPlaying(Song song) {
+        System.out.println("");
         System.out.println("Now playing: " + song.name() + " by " + song.artist());
     }
 
@@ -40,5 +41,14 @@ public class Menu {
         for (int i = 0; i < library.length; i++) {
             System.out.println((i + 1) + ": " + library[i].name() + " by " + library[i].artist());
         }
+    }
+
+    public static void displaySearchMenu() {
+        System.out.println("");
+        System.out.println("-->Search by title<--");
+        System.out.println("Enter song title to search for a song");
+        System.out.println("or");
+        System.out.println("Press [H]ome to return to main menu");
+        System.out.print("Enter song title: ");
     }
 }

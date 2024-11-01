@@ -35,7 +35,7 @@ class AudioPlayer {
                 new Thread(() -> {
                     try {
                         currentIndex = LibraryManager.returnIndex(song);
-                        System.out.println("Current index: " + currentIndex);
+                        // System.out.println("Current index: " + currentIndex);
                         mp3Player.play();
                     } catch (JavaLayerException e) {
                         System.out.println("Error playing MP3: " + e.getMessage());
@@ -61,13 +61,13 @@ class AudioPlayer {
         if (library != null && library.length > 0) {
             if (currentIndex != library.length - 1) {
                 currentIndex++;
-                System.out.println("Current index: " + currentIndex);
+                // System.out.println("Current index: " + currentIndex);
                 Song nextSong = library[currentIndex];
                 Menu.nowPlaying(nextSong);
                 play(nextSong);
             } else {
                 currentIndex = 0;
-                System.out.println("Current index: " + currentIndex);
+                // System.out.println("Current index: " + currentIndex);
                 Song nextSong = library[currentIndex];
                 Menu.nowPlaying(nextSong);
                 play(nextSong);
@@ -79,13 +79,13 @@ class AudioPlayer {
         if (library != null && library.length > 0) {
             if (currentIndex != 0) {
                 currentIndex--;
-                System.out.println("Current index: " + currentIndex);
+                // System.out.println("Current index: " + currentIndex);
                 Song prevSong = library[currentIndex];
                 Menu.nowPlaying(prevSong);
                 play(prevSong);
             } else {
                 currentIndex = library.length - 1;
-                System.out.println("Current index: " + currentIndex);
+                // System.out.println("Current index: " + currentIndex);
                 Song prevSong = library[currentIndex];
                 Menu.nowPlaying(prevSong);
                 play(prevSong);
@@ -141,6 +141,9 @@ class AudioPlayer {
             mp3Player = null;
             System.out.println("Song stopped");
         }
+    }
+
+    public static void goHome() {
     }
 
 }

@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public final class App {
 
-    ;
-
     public static void main(String[] args) {
         Song[] library = LibraryManager.readAudioLibrary();
         Scanner input = new Scanner(System.in);
