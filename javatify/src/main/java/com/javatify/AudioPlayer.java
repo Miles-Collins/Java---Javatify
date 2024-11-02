@@ -30,12 +30,12 @@ class AudioPlayer {
             }
 
             if (file.getName().endsWith(".mp3")) {
-                FileInputStream fis = new FileInputStream(file);
+                fis = new FileInputStream(file);
                 mp3Player = new Player(fis);
                 new Thread(() -> {
                     try {
                         currentIndex = LibraryManager.returnIndex(song);
-                        // System.out.println("Current index: " + currentIndex);
+                        Menu.activeSong = song;
                         mp3Player.play();
                     } catch (JavaLayerException e) {
                         System.out.println("Error playing MP3: " + e.getMessage());
@@ -53,7 +53,7 @@ class AudioPlayer {
         AudioPlayer.library = library;
         int randomIndex = (int) (Math.random() * library.length);
         Song randomSong = library[randomIndex];
-        Menu.nowPlaying(randomSong);
+        Menu.activeSong = randomSong;
         play(randomSong);
     }
 
@@ -63,13 +63,13 @@ class AudioPlayer {
                 currentIndex++;
                 // System.out.println("Current index: " + currentIndex);
                 Song nextSong = library[currentIndex];
-                Menu.nowPlaying(nextSong);
+                Menu.activeSong = nextSong;
                 play(nextSong);
             } else {
                 currentIndex = 0;
                 // System.out.println("Current index: " + currentIndex);
                 Song nextSong = library[currentIndex];
-                Menu.nowPlaying(nextSong);
+                Menu.activeSong = nextSong;
                 play(nextSong);
             }
         }
@@ -81,13 +81,13 @@ class AudioPlayer {
                 currentIndex--;
                 // System.out.println("Current index: " + currentIndex);
                 Song prevSong = library[currentIndex];
-                Menu.nowPlaying(prevSong);
+                Menu.activeSong = prevSong;
                 play(prevSong);
             } else {
                 currentIndex = library.length - 1;
                 // System.out.println("Current index: " + currentIndex);
                 Song prevSong = library[currentIndex];
-                Menu.nowPlaying(prevSong);
+                Menu.activeSong = prevSong;
                 play(prevSong);
             }
         }
@@ -130,7 +130,7 @@ class AudioPlayer {
         if (library != null && library.length > 0) {
             currentIndex = (currentIndex + 1) % library.length;
             Song nextSong = library[currentIndex];
-            Menu.nowPlaying(nextSong);
+            Menu.activeSong = nextSong;
             play(nextSong);
         }
     }

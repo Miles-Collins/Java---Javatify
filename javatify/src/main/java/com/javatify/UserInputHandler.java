@@ -34,6 +34,11 @@ class UserInputHandler {
                 System.out.println("");
                 System.out.println("-->Library<--");
                 Menu.displayLibrary(library);
+                Scanner input2 = new Scanner(System.in);
+                System.out.print("Please enter the name of the song you want to play: ");
+                userInput = input2.nextLine();
+                Search.searchByTitle(userInput, library);
+                isPlaying = true;
                 break;
             case "p":
                 System.out.println("");
@@ -71,7 +76,8 @@ class UserInputHandler {
                 AudioPlayer.stop();
                 isPlaying = false;
                 break;
-            case "m":
+            case "h":
+                AudioPlayer.stop();
                 isPlaying = false;
                 break;
             default:

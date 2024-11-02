@@ -4,6 +4,8 @@ public class Song {
 
     private String name;
     private String artist;
+    private String year;
+    private String genre;
     private String fileName;
 
     // serializes attributes into a string
@@ -15,6 +17,10 @@ public class Song {
         s += "name: " + name;
         s += ", ";
         s += "artist: " + artist;
+        s += ", ";
+        s += "artist: " + year;
+        s += ", ";
+        s += "artist: " + genre;
         s += ", ";
         s += "fileName: " + fileName;
         s += " }";
@@ -29,6 +35,14 @@ public class Song {
     // getters
     public String name() {
         return this.name;
+    }
+
+    public String year() {
+        return this.year;
+    }
+
+    public String genre() {
+        return this.genre;
     }
 
     public String artist() {

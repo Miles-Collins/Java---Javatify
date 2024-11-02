@@ -2,51 +2,71 @@
   {
     "name": "2025 Vision",
     "artist": "BoDleasons",
-    "fileName": "BoDleasons - 2025 Vision.mp3"
+    "fileName": "BoDleasons - 2025 Vision.mp3",
+    "genre": "Electronic Dubstep Instrumental",
+    "year": "2024"
   },
   {
     "name": "Don't Stop",
     "artist": "BoDleasons",
-    "fileName": "BoDleasons - Don't Stop.mp3"
+    "fileName": "BoDleasons - Don't Stop.mp3",
+    "genre": "Electronic Dubstep Instrumental",
+    "year": "2024"
   },
   {
     "name": "Drift Mode",
     "artist": "BoDleasons",
-    "fileName": "BoDleasons - Drift Mode.mp3"
+    "fileName": "BoDleasons - Drift Mode.mp3",
+    "genre": "Drum & Bass",
+    "year": "2024"
   },
   {
     "name": "Synthwave Serenade",
     "artist": "BoDleasons",
-	  "fileName": "BoDleasons - Synthwave Serenade.mp3"
+	  "fileName": "BoDleasons - Synthwave Serenade.mp3",
+    "genre": "Synthwave",
+    "year": "2024"
   },
   {
     "name": "Algorithms",
     "artist": "Chad Crouch",
-    "fileName": "Chad Crouch - Algorithms.mp3"
+    "fileName": "Chad Crouch - Algorithms.mp3",
+    "genre": "Electronic Soundtrack Instrumental",
+    "year": "2024"
   },
   {
     "name": "Moonlight Reprise",
     "artist": "Kai Engel",
-    "fileName": "Kai Engel - Moonlight Reprise.mp3"
+    "fileName": "Kai Engel - Moonlight Reprise.mp3",
+    "genre": "Classical Ambient IDM Instrumental",
+    "year": "2024"
   },
   {
     "name": "Chill Synthwave",
     "artist": "Lowtone Music",
-    "fileName": "Lowtone Music - Chill Synthwave.mp3"
+    "fileName": "Lowtone Music - Chill Synthwave.mp3",
+    "genre": "Electronic Synth-Pop Instrumental",
+    "year": "2024"
   },
   {
     "name": "Dreamwave",
     "artist": "Lowtone Music",
-    "fileName": "Lowtone Music - Dreamwave.mp3"
+    "fileName": "Lowtone Music - Dreamwave.mp3",
+    "genre": "Pop Electronic Synth-Pop",
+    "year": "2024"
   },
   {
     "name": "Skyline",
     "artist": "Lowtone Music",
-    "fileName": "Lowtone Music - Skyline.mp3"
+    "fileName": "Lowtone Music - Skyline.mp3",
+    "genre": "Pop Electronic Synth-Pop",
+    "year": "2024"
   },
   {
     "name": "Sunset Outdoor Party",
     "artist": "TimTaj",
-    "fileName": "TimTaj - Sunset Outdoor Party.mp3"
+    "fileName": "TimTaj - Sunset Outdoor Party.mp3",
+    "genre": "Pop House Dance",
+    "year": "2024"
   }
 ]
