@@ -143,7 +143,13 @@ class AudioPlayer {
         }
     }
 
-    public static void goHome() {
+    static void forward() {
+        // int time = mp3Player.getMicrosecondLength();
+        // System.out.println("Current time: " + time);
+        // System.out.println("5 seconds in future: " + mp3Player.set(time + 5));
     }
 
+    static void rewind() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

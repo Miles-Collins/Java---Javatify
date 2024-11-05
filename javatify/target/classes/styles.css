@@ -1,0 +1,32 @@
+/* styles.css */
+.button {
+    -fx-background-color: #e0e0e0;
+    background-color: #e0e0e0;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+    padding: 10 20;
+    -fx-cursor: hand;
+    cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #d3d3d3;
+    background-color: #d3d3d3;
+}
+
+.button:pressed {
+    -fx-background-color: #c6c6c6;
+    background-color: #c6c6c6;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    font-size: 24px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-padding: 10 0;
+    padding: 10 0;
+}

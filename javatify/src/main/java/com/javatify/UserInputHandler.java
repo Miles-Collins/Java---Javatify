@@ -66,6 +66,12 @@ class UserInputHandler {
             case "prev":
                 AudioPlayer.playPreviousSong(library);
                 break;
+            case "f":
+                AudioPlayer.forward();
+                break;
+            case "rewind":
+                AudioPlayer.rewind();
+                break;
             case "pause":
                 AudioPlayer.pause();
                 break;
